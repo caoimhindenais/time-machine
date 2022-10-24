@@ -23,3 +23,12 @@ curl --silent --show-error -v  --silent --show-error localhost:8080/actuator/hea
 ```
 kubectl config set-context --current --namespace=time-machine
 ```
+
+
+### Step 4, Fix the "test" 
+
+```
+kubectl port-forward time-machine 8080:8080
+
+kubectl delete pod time-machine
+```
