@@ -16,3 +16,10 @@ Note : The health check
 curl --silent --show-error -v  --silent --show-error localhost:8080/actuator/health | jq
 
 ```
+
+
+### Step 3, Add a namespace
+
+```
+kubectl config set-context --current --namespace=time-machine
+```
