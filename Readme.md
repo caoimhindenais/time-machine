@@ -32,3 +32,9 @@ kubectl port-forward time-machine 8080:8080
 
 kubectl delete pod time-machine
 ```
+
+### Step 5, Add a deployment and scale it
+
+```
+kubectl scale --current-replicas=1 --replicas=3 deployment/time-machine
+```
