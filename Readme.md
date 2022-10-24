@@ -47,3 +47,11 @@ Note:
 https://kubernetes.github.io/ingress-nginx/deploy/#quick-start
 ```
 
+
+### Step 7, So PODs
+
+```
+kubectl exec -it time-machine-7f8d4bc44b-5r9dl --container=netshoot  bash
+tcpdump -v -i any -w file.pcap
+tshark  -r file.pcap -T fields -e http.request.method  -e http.request.full_uri
+```

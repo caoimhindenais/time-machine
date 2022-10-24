@@ -16,6 +16,10 @@ spec:
         - name: time-machine
           image: time-machine
           imagePullPolicy: IfNotPresent
+        - name: netshoot
+          image: nicolaka/netshoot
+          command: [ "/bin/bash" ]
+          args: [ "-c", "while true; do ping localhost; sleep 60;done" ]
       restartPolicy: Always
   selector:
     matchLabels:
