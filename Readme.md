@@ -38,3 +38,12 @@ kubectl delete pod time-machine
 ```
 kubectl scale --current-replicas=1 --replicas=3 deployment/time-machine
 ```
+
+### Step 6, Routing , ingress and service
+```
+curl localhost/
+
+Note: 
+https://kubernetes.github.io/ingress-nginx/deploy/#quick-start
+```
+
